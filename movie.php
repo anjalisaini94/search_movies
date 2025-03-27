@@ -1,10 +1,10 @@
 <?php
-$apiKey = 'b7734675'; // Use your actual API key
+$apiKey = 'b7734675'; //  API key
 $searchResults = [];
 $movieDetails = null;
 $error = '';
 
-// Handle search request
+// search request
 if (isset($_GET['title']) && !empty($_GET['title'])) {
     $title = urlencode($_GET['title']);
     $url = "http://www.omdbapi.com/?s=$title&apikey=$apiKey";
@@ -19,7 +19,7 @@ if (isset($_GET['title']) && !empty($_GET['title'])) {
     }
 }
 
-// Handle movie details request
+//  movie details request
 if (isset($_GET['movie_id']) && !empty($_GET['movie_id'])) {
     $movieId = $_GET['movie_id'];
     $url = "http://www.omdbapi.com/?i=$movieId&apikey=$apiKey";
